@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO</title>
+</head>
+
+
+<body>
+<div class="container">
+
+    <h2>CLAIM YOUR DAILY PLAN</h2>
+    
+
+    <input id="input">
+    
+    <button onclick="add()" id="btn">add</button>
+    
+    <ul id="list" >
+        <li>Hai Nanba!!!
+            <button onclick="del(event)" id="btn2">delete</button>
+        </li>
+    </ul>
+
+</div>
+    
+</body>
+
+
+
+
+<style>
+
+body{
+    text-align: center;
+    background-color: rgb(260, 189, 260);
+ 
+}
+#btn{
+    color: blue;
+    width: 38px;
+    height: 22px;
+}
+/* #btn:hover{
+    transition: all;
+    animation-iteration-count: infinite;
+    transition-duration: 10s;
+
+    transform: rotate(390deg);
+} */
+@media all (max-width:325px){
+.container{
+       background-color:green;
+      }
+}
+</style>
+
+
+
+
+
+<script>
+  
+
+var input = document.getElementById("input")
+var ul =document.getElementById("list")
+var btn = document.getElementById("btn")
+function add()
+{
+    var item = document.createElement("li")
+    item.innerHTML =input.value+"<button onclick='del(event)'>delete</button>"
+    ul.append(item)
+}
+
+function del(event)
+{
+event.target.parentElement.remove(event)
+}
+
+
+</script>
+</html>
